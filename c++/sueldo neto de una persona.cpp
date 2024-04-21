@@ -24,13 +24,13 @@ int main (){
 			ISR=0.0192;
 			ISR*=sueldo_bruto;
 			cout<<"Su PAgo de Impuestos Sobre la Renta es de: "<<ISR<<endl;
-		
+			cuota= 0;
 			Infotep*=sueldo_bruto;
 		
 			cout<<"Su PAgo de infotep es de: "<<Infotep<<endl;
 		
 			// Aqui sumamos todas las retenciones
-			retenciones=ARS+AFP+ISR+Infotep;
+			retenciones=ARS+AFP+ISR+Infotep+cuota;
 			cout<<"EL total de retenciones es de: "<<retenciones<<endl;
 	
 			sueldo_neto=sueldo_bruto-retenciones;
@@ -40,7 +40,8 @@ int main (){
 	}
 	
 		
-			if(sueldo_bruto < 50000){
+		for(ISR=0.064;ISR<1;ISR++){
+				if(sueldo_bruto < 50000){
 			
 			if(sueldo_bruto >= 20000 ){
 			ARS=0.011*sueldo_bruto;
@@ -76,13 +77,15 @@ int main (){
 		
 			}
 	
+		}
+		
 	if(sueldo_bruto>=50000){
 			ARS=0.01*sueldo_bruto;
 		cout<<"Su PAgo de ARS es de: "<<ARS<<endl;
 		
 		AFP=0.008*sueldo_bruto;
 		cout<<"Su pago de AFP es de: "<<AFP<<endl;
-		
+		ISR=0.1088;
 		ISR*=sueldo_bruto;
 		cout<<"Su PAgo de Impuestos Sobre la Renta es de: "<<ISR<<endl;
 		
