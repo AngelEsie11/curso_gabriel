@@ -42,11 +42,5 @@ json_string = {
   ]
 }
 
-#print(json_str)
-
-json_data=json.dumps(json_string,indent=4,separators=(", ", " : "))
-
+json_data = json.dumps(json_string, indent=4, separators=(", ", " : "))
 print(json_data)
-#python_dict=json.loads(json_string)
-#print(python_dict)
-#print(python_dict['members'])
