@@ -1,9 +1,6 @@
-import numpy as np
+if (5 < 9)
+    print("yes")
 
-
-def relu1(a):
-    return np.maximum(0, a)
-
-
-print(relu1(-3))
+else( print("no"))
+   
 
