@@ -8,8 +8,8 @@ user='angel'
 password='Eren2111'
 
 try:
-conexion = pyodbc.connect('driver={obdc driver 17 for sql server};server='+server+';database='+bd+';uid='+user+';pwd='+password)
-print('Conexion exitosa')
+    conexion = pyodbc.connect('driver={obdc driver 17 for sql server};server='+server+';database='+bd+';uid='+user+';pwd='+password)
+    print('Conexion exitosa')
     
 except:
     print('error al intentar')
