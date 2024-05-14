@@ -96,3 +96,6 @@ ORDER BY TotalVendido DESC;
 SELECT SUPLIDOR_ID, SUM(Precio * Stock) AS ValorTotalInventario
 FROM ARTICULOS
 GROUP BY SUPLIDOR_ID;
+
+--version
+SELECT @@version;
