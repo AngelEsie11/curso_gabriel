@@ -22,6 +22,7 @@ while eleccion != 1 or eleccion != 2 or eleccion != 3 or eleccion != 4:
     eleccion = int(input(("Indique qué operación desea realizar: ")))
     print(eleccion)
     if eleccion == 1: 
+        #  TODO: reparar el codigo de $%##Q*
          print("El resultado de sumar",numero_1 + numero_2 ,"es:", suma)
     elif eleccion == 2: 
          print("El resultado de restar", numero_1 - numero_2, "es:", resta )
@@ -29,6 +30,6 @@ while eleccion != 1 or eleccion != 2 or eleccion != 3 or eleccion != 4:
         print("El resultado de mutiplicar", numero_1 * numero_2, "es:", multiplicacion )
         
     elif eleccion == 4: 
-         print("Fin del programa")
+        
          break
     
