@@ -6,7 +6,7 @@ while int(calc) < 11:
     list.append(calc)
     calc = int(calc) + 1
 
-print(list)
+
 
 
 numero_1 = int(input("introduce el 1° número: "))
