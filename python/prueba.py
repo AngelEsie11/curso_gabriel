@@ -12,25 +12,26 @@ try:
     cursor.execute("articulos_con_nombresprovedor")
     rows = cursor.fetchall()
     
-    count = 0  # Initialize a counter
+    count = 0  
 
     while True:
         for row in rows:
-            print(row)  # Print the row
-            count += 1  # Increment the counter
+            print(row)  
+            count += 1 
             
-            # Check if the counter has reached the limit
+            # ELegir la selecion ya sea continual o salir
             if count >= Counter:
                 pregu = input("Presione S para continuar o N para salir: ").strip().upper()
                 if pregu == continual:
-                    count = 0  # Reset the counter if the user wants to continue
+                    count = 0  # resetiar el contador
                 elif pregu == detener:
-                    break  # Exit the loop if the user wants to stop
+                    print("termino el proceso")
+                    break  #Detener el bucle
                 else:
                     print("Entrada no valida. Saliendo del programa.")
                     break
 
-        # If the loop is broken by user input or end of rows, exit the outer loop
+        # aqui sale del bucle exterior
         if count < Counter or pregu == detener or pregu not in (continual, detener):
             break
 
