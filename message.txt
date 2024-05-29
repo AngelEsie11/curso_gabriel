@@ -1,0 +1,49 @@
+<@496804792040161282> <@1195133744265306264> 
+
+
+
+### Título del Proyecto:
+Sistema de Gestión de Inventarios para una Tienda de Electrónica
+
+### Descripción del Proyecto:
+El objetivo de este proyecto es desarrollar un sistema de gestión de inventarios para una tienda de electrónica que permita realizar un seguimiento detallado de los productos disponibles, gestionar las ventas y mantener actualizado el stock de manera dinámica. El sistema contará con consultas avanzadas implementadas mediante procedimientos almacenados y utilizará eventos en la base de datos a través de triggers para automatizar ciertas acciones.
+
+### Funcionalidades Principales:
+1. **Gestión de Productos:**
+   - Registro, actualización y eliminación de productos.
+   - Consulta de productos por categoría, marca, precio, etc.
+   - Procedimientos almacenados para realizar búsquedas avanzadas, como encontrar productos con bajo stock o con mayor rotación.
+
+2. **Gestión de Ventas:**
+   - Registro de ventas con detalles de productos vendidos y cantidad.
+   - Cálculo automático del monto total de la venta.
+   - Actualización del stock de productos después de cada venta mediante un trigger.
+
+3. **Informes y Estadísticas:**
+   - Generación de informes de ventas por periodo (diario, semanal, mensual).
+   - Estadísticas de productos más vendidos, productos con menor rotación, etc.
+   - Procedimientos almacenados para generar informes personalizados según criterios específicos.
+
+4. **Seguridad y Auditoría:**
+   - Implementación de roles de usuario con diferentes niveles de acceso (administrador, empleado).
+   - Registro de auditoría para rastrear cambios en los datos importantes (registro de productos, ventas, etc.).
+
+### Procedimientos Almacenados:
+1. `BuscarProductosPorCategoria`: Procedimiento para buscar productos por categoría.
+2. `ActualizarStockProducto`: Procedimiento para actualizar el stock de un producto después de una venta.
+
+### Triggers:
+1. `AfterInsertVenta`: Trigger que se activa después de insertar una nueva venta y actualiza automáticamente el stock de los productos vendidos.
+2. `BeforeDeleteProducto`: Trigger que se activa antes de eliminar un producto y verifica si hay ventas asociadas al producto, evitando la eliminación si hay ventas registradas.
+
+### Tecnologías Utilizadas:
+- Base de Datos: SQL Server
+- Lenguaje de Programación: C# (para la interfaz de usuario)
+- ORM (Mapeo Objeto-Relacional): Entity Framework
+
+### Notas Adicionales:
+- Se implementará un diseño de base de datos adecuado que garantice la integridad y eficiencia de los datos.
+- La interfaz de usuario será desarrollada de manera que sea intuitiva y fácil de usar para los empleados de la tienda.
+- Se realizarán pruebas exhaustivas para garantizar la estabilidad y funcionalidad del sistema.
+
+Este proyecto proporcionará una solución completa y dinámica para la gestión de inventarios de una tienda de electrónica, utilizando consultas avanzadas a través de procedimientos almacenados y eventos en la base de datos mediante triggers para automatizar procesos clave.
