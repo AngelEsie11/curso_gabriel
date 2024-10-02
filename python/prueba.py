@@ -1,6 +1,21 @@
-if (5 < 9)
-    print("yes")
 
-else( print("no"))
+
+
+if (5 < 9){
+
+
+
+print("yes")
+
+
+
+
+}
+    
+else{
+    
+    
+    
+    ( print("no"))}
    
 
